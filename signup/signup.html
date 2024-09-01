@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="shortcut icon"
+      href="/img/spotify-logo-png-white-2-black.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html"><img src="/SVG/logo-navbar.svg" alt="" /></a>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="signup-form">
+          <h2>Sign Up</h2>
+          <form id="signUpForm">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
+              <button type="submit">Sign Up</button>
+            </div>
+          </form>
+          <div class="login-link">
+            Already have an account?
+            <a href="/login/login.html" onclick="redirectToLogin()"
+              >Login here</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="signup.js"></script>
+  </body>
+</html>

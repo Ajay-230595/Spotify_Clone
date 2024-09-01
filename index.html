@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Spotify Clone</title>
+    <link rel="icon" type="image/x-icon" href="/img/Spotify_App_Logo.svg.png">
+
+  </head>
+  <body>
+    <header class="container flex bg-black">
+      <!-- left section  -->
+
+      <div class="left pointer">
+        <img class="invert cancel" src="SVG/cancel.svg" alt="">
+        <div class="home bg-grey p-1 m-1 rounded">
+          <div class="logo invert">
+           <a href="#"> <img src="SVG/logo.svg" alt="logo" /></a>
+          </div>
+          <ul>
+            <li><img class="invert" src="SVG/home.svg" alt="home" />Home</li>
+            
+            <li>
+              <img class="invert" src="SVG/search.svg" alt="search" />Search
+            </li>
+          </ul>
+        </div>
+        <!-- Libray starts -->
+        <div class="library m-1 p-2  rounded bg-grey">
+          <div class="heading">
+            <img class="invert" src="SVG/library.svg" alt="" />Your Library
+          </div>
+          <div  class="container-library ">
+            <div  class="create-playlist rounded">
+             <div class="playlistSearch">
+              <div class="createInput">
+                <input  type="text" placeholder="Enter playlist Name">
+              <button>Create</button>
+              </div>
+             </div>
+              <h3 class="a" >Create your first playlist</h3>
+              <p class="b" >It's easy, we'll help you</p>
+              <button class="playlists a" >Create playlist</button>
+            </div>
+            <div class="browse-prodcasts rounded">
+              <h3>Let's find some podcasts to follow</h3>
+              <p>We'll keep you updated on new episodes</p>
+              <button>Browse prodcasts</button>
+            </div>
+          </div>
+
+          <!-- Footer start ||  Footer is in the library section-->
+          <footer class="footer">
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/">
+                <span>Legal</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                <span>Safety & Privacy Center</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                <span>Privacy Policy</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                <span>Cookies</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                <span>About Ads</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility/">
+                <span>Accessibility</span>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.spotify.com/legal/cookies-policy/">
+                <span>Cookies</span>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <!-- right section start -->
+
+      <section class="right border m-1 rounded bg-light-grey rounded">
+        <header class="bg-grey">
+          <nav class="navbar">
+            <img class="hamburger invert"  src="SVG/hamburger.svg" alt="">
+            <div class="arrow">
+              
+              <img class="invert l" src="SVG/left.svg" alt="left" />
+              <img class="invert r" src="SVG/right.svg" alt="right" />
+            </div>
+            <div class="button">
+             <a href="/signup/signup.html"> <button class="signup bg-grey">Sign up</button></a>
+              <a href="/login/login.html"><button  class="login">Log in</button>
+              </a>
+            </div>
+            
+          </nav>
+        </header>
+
+        <!-- spotifyPlaylists starts -->
+
+        <main class="spotifyPlaylists">
+         <!-- playmusic bar -->
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="songinfo">Music is playing</div>
+            <div class="songbuttons">
+             <button><img src="/SVG/previousplay.svg" alt=""></button>
+              <button><img src="/SVG/pause.svg" alt=""></button>
+              <button><img src="/SVG/forwardplay.svg" alt=""></button>
+            </div>
+            <div class="songtime">
+              time
+            </div>
+          </div>
+          <!-- card of music started  -->
+          <h1>Spotify Playlists</h1>
+          <div class="cardContainer">
+            <div class="card">
+              <div class="play">
+                <button onclick="playMusic()" class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+              
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+            <div class="card">
+              <div class="play">
+                <button class="green-play">
+                  <span>
+                    <img src="/SVG/play.svg" alt="">
+                  </span>
+                </button>
+              </div>
+
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+                alt="img"
+              />
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness!</p>
+            </div>
+
+
+          </div> 
+        </main>
+      </section>
+    </header>
+    <footer class="foot-end">
+      <div class="foot"><span>Preview of Spotify</span>
+          <p>
+            Sign up to get unlimited songs and podcasts with occasional ads. No
+            credit card needed.
+          </p>
+        </div>
+        <a href="/signup/signup.html"><button class="foot-button">Sign up free</button></a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

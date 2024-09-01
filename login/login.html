@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="shortcut icon"
+      href="/img/spotify-logo-png-white-2-black.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/index.html"><img src="/SVG/logo-navbar.svg" alt="" /></a>
+      </nav>
+    </header>
+    <main>
+      <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="username">Email or username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Email or username"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <span class="toggle-password" onclick="togglePasswordVisibility()">
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path
+                  d="M12 4.5c-5 0-9.27 3.11-11 7.5 1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zm0 12c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <div class="input-group remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <label class="remember-mee" for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+        <a href="/resetp/reset.html" class="forgot-password"
+          >Forgot your password?</a
+        >
+        <div class="signup-link">
+          <span>Don't have an account?</span>
+          <a href="/signup/signup.html">Sign up for Spotify</a>
+        </div>
+        <div id="message"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
